@@ -1,3 +1,3 @@
 return {
-  'tpope/vim-surround',
+  require('mini.surround').setup({})
 }
