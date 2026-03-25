@@ -957,7 +957,7 @@ vim.o.foldmethod = 'marker'
 -- Interact with OS clipboard
 -- https://gronskiy.com/posts/2023-03-26-copy-via-vim-tmux-ssh/
 -- https://ofirgall.github.io/learn-nvim/chapters/04-copy-paste-visual.html
-vim.g.clipboard = 'osc52'
+-- vim.g.clipboard = 'osc52'
 vim.keymap.set('', '<leader>y', '"+y', { desc = 'Yank to clipboard' }) -- E.g: <leader>yy will yank current line to os clipboard
 vim.keymap.set('', '<leader>Y', '"+y$', { desc = 'Yank until EOL to clipboard' })
 vim.keymap.set('n', '<leader>p', '"+p', { desc = 'Paste after cursor from clipboard' })
