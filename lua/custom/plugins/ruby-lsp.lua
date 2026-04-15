@@ -1,9 +1,9 @@
--- return {
---   {
---     'adam12/ruby-lsp.nvim',
---     config = true,
---     opts = {
---       auto_install = true,
---     },
---   },
--- }
+return {
+  --   {
+  --     'adam12/ruby-lsp.nvim',
+  --     config = true,
+  --     opts = {
+  --       auto_install = true,
+  --     },
+  --   },
+}
