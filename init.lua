@@ -659,6 +659,7 @@ require('lazy').setup({
         servers["puppet"] = {
           -- cmd = { "puppet-languageserver", "--stdio", "--puppet-settings=--confdir,/code/environments/bartonp" },
         }
+        servers["rubocop"] = {}
       end
 
       -- Ensure the servers and tools above are installed
