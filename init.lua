@@ -600,13 +600,12 @@ require('lazy').setup({
       --  See `:help lsp-config` for information about keys and how to configure
       ---@type table<string, vim.lsp.Config>
       local servers = {
+        bashls = {},
         -- clangd = {},
         -- gopls = {},
-        puppet = {
-        --  cmd = { "puppet-languageserver", "--stdio", "--puppet-settings=--confdir,/code/environments/bartonp" },
-        },
         pyright = {},
         -- rust_analyzer = {},
+        vimls = {},
         -- yamlls = {},
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -651,6 +650,16 @@ require('lazy').setup({
           },
         },
       }
+
+      local is_mac = vim.loop.os_uname().sysname == "Darwin"
+      local is_linux = vim.loop.os_uname().sysname == "Linux"
+
+      -- conditionally add a Linux-only server
+      if is_linux then
+        servers["puppet"] = {
+          -- cmd = { "puppet-languageserver", "--stdio", "--puppet-settings=--confdir,/code/environments/bartonp" },
+        }
+      end
 
       -- Ensure the servers and tools above are installed
       --
