@@ -602,6 +602,9 @@ require('lazy').setup({
       local servers = {
         -- clangd = {},
         -- gopls = {},
+        puppet = {
+          cmd = { "puppet-languageserver", "--stdio", "--puppet-settings=--confdir,/code/environments/bartonp" },
+        },
         pyright = {},
         -- rust_analyzer = {},
         -- yamlls = {},
