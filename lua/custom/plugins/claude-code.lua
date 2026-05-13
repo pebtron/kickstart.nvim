@@ -1,21 +1,6 @@
--- You can add your own plugins here or in other files in this directory!
---  I promise not to create any merge conflicts in this directory :)
---
--- See the kickstart.nvim README for more information
+vim.pack.add({"https://github.com/nvim-lua/plenary.nvim"})
+vim.pack.add({"https://github.com/greggh/claude-code.nvim"})
 
----@module 'lazy'
----@type LazySpec
---return {}
+require("claude-code").setup()
 
-return {
-  {
-    'greggh/claude-code.nvim',
-    dependencies = {
-      'nvim-lua/plenary.nvim', -- Required for git operations
-    },
-    config = function() require('claude-code').setup() end,
-  },
-  {
-    vim.keymap.set('n', '<leader>cc', '<cmd>ClaudeCode<CR>', { desc = 'Toggle Claude Code' }),
-  },
-}
+vim.keymap.set('n', '<leader>cc', '<cmd>ClaudeCode<CR>', { desc = 'Toggle Claude Code' })
